@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+    booking_backend:
+      container_name: booking_backend
+      build: 
+        context: .
+      # image: chetanbnagmoti/book_my_ticket:1.0.2
+      environment:
+        - DB_URL=${DB_URL}
+        - PORT=${PORT}
+        - PASSWORD_KEY=${PASSWORD_KEY}
+      ports:
+        - "3005:3005" 
+      restart: always   
